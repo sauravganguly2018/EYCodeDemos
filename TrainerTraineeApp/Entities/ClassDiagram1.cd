@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TrainerTraineeApp.Entities.Trainee">
+    <Position X="7" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Trainee.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Trainer" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Trainings" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TrainerTraineeApp.Entities.Trainer">
+    <Position X="4" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAASAEAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Trainer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TheOrg" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Trainees" />
+      <Property Name="Trainings" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TrainerTraineeApp.Entities.Organization">
+    <Position X="1" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Entities\Organization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrainerTraineeApp.Entities.Training">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAIAAAACAAACAAABACAAAAAAAgAA=</HashCode>
+      <FileName>Entities\Training.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Trainer" />
+      <Property Name="Course" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Trainees" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TrainerTraineeApp.Entities.Module">
+    <Position X="4" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Module.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Units" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TrainerTraineeApp.Entities.Course">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Course.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Modules" />
+      <Property Name="Trainings" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TrainerTraineeApp.Entities.Unit">
+    <Position X="7" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Entities\Unit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Topics" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TrainerTraineeApp.Entities.Topic">
+    <Position X="7" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Topic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
