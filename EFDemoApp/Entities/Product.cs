@@ -36,6 +36,7 @@ namespace EFDemoApp.Entities
 
     public class Supplier : Person
     {
+        // [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string GSTNo { get; set; }   
         public string PAN { get; set; }
         public string TradeNo { get; set; }

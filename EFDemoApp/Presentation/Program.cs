@@ -10,9 +10,84 @@ namespace EFDemoApp.Presentation
 
         static void Main(string[] args)
         {
+            // ProductsDbContext db = new ProductsDbContext();
 
-            NewMethod5();
-            
+            // get all products -PLinq
+            //var allProducts = from p in db.Products.AsParallel()
+            //                  select p;
+
+            // get all products for readonly
+
+            ProductsRepository repo = new ProductsRepository();
+            var allProducts = repo.GetAll();
+            foreach (var item in allProducts)
+            {
+                Console.WriteLine(item.Name);
+            }
+
+
+            // increase all products price by 1rs
+
+            //db.Database.ExecuteSqlRaw("update Products set price =price+1");
+            //Console.WriteLine("Done");
+
+            // get all products
+
+            //var allProducts = db.Products.ToList();
+            // update the price
+            //foreach(var item in allProducts)
+            //{
+            //    item.Price += 1;
+            //}
+            // save changes
+            //db.SaveChanges();
+        }
+
+        public static void NewMethod8()
+        {
+            // Get all suppliers
+            ProductsDbContext db = new ProductsDbContext();
+            var s = from c in db.Customers
+                    select c;
+            s.ToList();
+        }
+        public static void NewMethod7()
+        {
+            Supplier s = new Supplier
+            {
+                // add new supplier
+                Name = "Supplier 1",
+                Address = "Supplier Address 1",
+                City = "Supplier City 1",
+                Email = "Email",
+                Mobile = "1234567890",
+                PAN = "supplier pan 1",
+                TradeNo = "supplier trade 1",
+                GSTNo="supplier 1 gst"
+            };
+
+            ProductsDbContext db = new ProductsDbContext();
+            db.Suppliers.Add(s);
+            db.SaveChanges();
+        }
+
+        public static void NewMethod6()
+        {
+            // Add new Custome
+            Customer c = new Customer
+            {
+                Name = "Customer 1",
+                Address = "Address 1",
+                City = "City 1",
+                CustType = "Type 1",
+                Discount = 100,
+                Email = "Email",
+                Mobile = "1234567890"
+            };
+
+            ProductsDbContext db = new ProductsDbContext();
+            db.Customers.Add(c);
+            db.SaveChanges();
         }
 
         public static void NewMethod5()
