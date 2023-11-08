@@ -9,17 +9,22 @@
 <p>
     <a asp-action="Submit" class="btn btn-primary">Create New</a>
 </p>
-<table class="table">
+    <form  class ="text-center" id="myCat" asp-action="Index" asp-controller="Articles" method="post">
+    <label for="CategoryID">Category : </label>
+    <select id="CategoryID" name="CategoryID">
+        <option value="">Categories</option>
+        @foreach (var item in ViewBag.Categories as List<KnowledgeHubPortal.Models.Domain.Category>)
+        {
+            <option value="@item.CategoryID">@item.CategoryName</option>
+        }
+    </select>
+   </form>
+<hr />
+<table class="table table-striped">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ArticleID)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.URL)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Description)
@@ -27,26 +32,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.Author)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateSubmitted)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CategoryID)
-            </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
+
             <td>
-                @Html.DisplayFor(modelItem => item.ArticleID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.URL)
+               <a href="@item.URL" target="_blank">@item.Title</a>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Description)
@@ -54,18 +47,15 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Author)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateSubmitted)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CategoryID)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
+
         </tr>
 }
     </tbody>
 </table>
+
+<script>
+    document.getElementById("CategoryID").addEventListener("change", function (e) {
+        e.preventDefault();
+        document.getElementById("myCat").submit();
+    });
+</script>

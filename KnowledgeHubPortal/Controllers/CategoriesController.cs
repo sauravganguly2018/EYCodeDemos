@@ -1,15 +1,19 @@
 ﻿using System.Data;
 using KnowledgeHubPortal.Models.DataAccess;
 using KnowledgeHubPortal.Models.Domain;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 
 namespace KnowledgeHubPortal.Controllers
 {
+    [Authorize(Roles ="admin")]
     public class CategoriesController : Controller
     {
         CategoryRepository repo=new CategoryRepository();
 
+
+        // [AllowAnonymous]
         //.../Categories/Index
         public IActionResult Index(string term)
         {
