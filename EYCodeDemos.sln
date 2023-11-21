@@ -73,7 +73,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Knowledge Hub Portal", "Kno
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KnowledgeHubPortal", "KnowledgeHubPortal\KnowledgeHubPortal.csproj", "{97F529F8-A474-47CF-A3A5-2FBC7B6B43A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoMVCApp", "DemoMVCApp\DemoMVCApp.csproj", "{238B9ED5-461D-4F49-B38F-5885EB639298}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoMVCApp", "DemoMVCApp\DemoMVCApp.csproj", "{238B9ED5-461D-4F49-B38F-5885EB639298}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperProductsCatalog", "SuperProductsCatalog\SuperProductsCatalog.csproj", "{F21290EC-F2F8-4342-823D-74E67439E2FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{331034CD-1DC7-4D99-888A-77907310D061}"
+	ProjectSection(SolutionItems) = preProject
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MahaKumbh", "MahaKumbh\MahaKumbh.csproj", "{2E62FF3C-A9E7-4145-B02D-8018482B3951}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MahaKumbhAPI", "MahaKumbhAPI\MahaKumbhAPI.csproj", "{F1194B56-BB74-40E2-8607-1F1A1A972E96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -205,6 +216,18 @@ Global
 		{238B9ED5-461D-4F49-B38F-5885EB639298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{238B9ED5-461D-4F49-B38F-5885EB639298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{238B9ED5-461D-4F49-B38F-5885EB639298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F21290EC-F2F8-4342-823D-74E67439E2FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F21290EC-F2F8-4342-823D-74E67439E2FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F21290EC-F2F8-4342-823D-74E67439E2FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F21290EC-F2F8-4342-823D-74E67439E2FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E62FF3C-A9E7-4145-B02D-8018482B3951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E62FF3C-A9E7-4145-B02D-8018482B3951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E62FF3C-A9E7-4145-B02D-8018482B3951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E62FF3C-A9E7-4145-B02D-8018482B3951}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1194B56-BB74-40E2-8607-1F1A1A972E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1194B56-BB74-40E2-8607-1F1A1A972E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1194B56-BB74-40E2-8607-1F1A1A972E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1194B56-BB74-40E2-8607-1F1A1A972E96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

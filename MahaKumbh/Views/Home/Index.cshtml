@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (TempData["Login"] != null)
+{
+    <div id="message-container" class="alert alert-success" role="alert">
+        @TempData["Login"]
+    </div>
+}
+
+<div class="text-center">
+    @if (TempData["UserName"] != null)
+    {
+        <h1 class="display-4">Welcome @TempData["UserName"]</h1>
+    }
+    else
+    {
+        <h1 class="display-4">Welcome User</h1>
+    }
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Display the message
+        showMessage();
+    });
+
+    function showMessage() {
+        var messageContainer = document.getElementById("message-container");
+
+        setTimeout(function () {
+            hideMessage();
+        }, 5000);
+    }
+
+    function hideMessage() {
+        document.getElementById("message-container").style.display = "none";
+    }
+</script>

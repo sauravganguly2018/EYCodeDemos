@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MahaKumbh.Models.Domain.User>
+
+@if(TempData["UserName"]!=null)
+{
+    <h1 class="text-center">Welcome @TempData["UserName"]</h1>
+}
+else
+{
+    <h1 class="text-center">Welcome User</h1>
+}
+
+
+
+
